@@ -3,6 +3,7 @@
 WeatherScope is a beautifully designed, feature-rich weather application built with Next.js and OpenWeatherMap API, allowing users to explore current conditions, hourly and daily forecasts, favorite cities, and even a fullscreen weather map of India.
 
 🚀 Features
+
 🔍 City-based Weather Search with autocomplete suggestions
 
 🌐 Live Weather Map of India powered by OpenWeatherMap
@@ -24,6 +25,7 @@ WeatherScope is a beautifully designed, feature-rich weather application built w
 ✨ Animated background effects based on weather & theme
 
 📦 Tech Stack
+
 Framework: Next.js
 
 API: OpenWeatherMap
@@ -35,6 +37,7 @@ Styling: Tailwind CSS + custom gradients & transitions
 State Management: React Hooks & Context API
 
 🛠️ Setup Instructions
+
 Clone the Repository:
 
 bash
@@ -65,28 +68,12 @@ npm run dev
 Visit http://localhost:3000 in your browser.
 
 🗺️ India Weather Map Integration
+
 Click the floating Map Pin icon in the bottom-right corner to open a fullscreen interactive weather map for India, powered by OpenWeatherMap layers. Supports fullscreen toggle and keyboard Esc key to close.
 
-📸 Preview
-Optionally, add GIFs/screenshots here of:
-
-Search bar in action
-
-Dark/Light theme switch
-
-Weather forecast cards
-
-Fullscreen India map
-
-📁 Project Structure Highlights
-diff
-Copy
-Edit
-- page.js          # Main component containing all UI logic
-- public/
-- styles/
-- .env.local       # API Key for OpenWeatherMap
+       
 📜 License
+
 MIT License. Free to use and customize.
 
 👨‍💻 Author
