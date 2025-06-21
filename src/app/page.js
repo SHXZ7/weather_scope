@@ -21,6 +21,7 @@ import {
   Maximize2,
   Minimize2,
 } from "lucide-react";
+import WeatherChatbot from "./WeatherChatbot";
 
 // OpenWeatherMap API Configuration
 const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
@@ -1476,23 +1477,19 @@ const WeatherApp = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   const [isMapLoading, setIsMapLoading] = useState(false);
   const [isMapFullscreen, setIsMapFullscreen] = useState(false);
-  const [favorites, setFavorites] = useState(() => {
-    if (typeof window !== "undefined") {
-      return JSON.parse(localStorage.getItem("weather-favorites") || "[]");
-    }
-    return [];
-  });
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("weather-theme") || "default";
-    }
-    return "default";
-  });
+  const [favorites, setFavorites] = useState([]); // default empty array
+  const [theme, setTheme] = useState("default"); // default theme
   const [showMap, setShowMap] = useState(false);
 
+  // Load favorites and theme from localStorage on client only
   useEffect(() => {
-    localStorage.setItem("weather-theme", theme);
-  }, [theme]);
+    if (typeof window !== "undefined") {
+      const favs = localStorage.getItem("weather-favorites");
+      if (favs) setFavorites(JSON.parse(favs));
+      const storedTheme = localStorage.getItem("weather-theme");
+      if (storedTheme) setTheme(storedTheme);
+    }
+  }, []);
 
   // Force re-render on theme change
   useEffect(() => {}, [theme]);
@@ -1642,6 +1639,17 @@ const WeatherApp = () => {
         secondary: isDarkMode ? "bg-indigo-500" : "bg-blue-200",
         accent: isDarkMode ? "bg-blue-500" : "bg-indigo-200",
       };
+
+  // Step 3: Add getWeatherReply function for chatbot
+  const getWeatherReply = async (msg) => {
+    const res = await fetch("/api/ai-chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: msg }),
+    });
+    const data = await res.json();
+    return data.reply;
+  };
 
   return (
     <div className={backgroundClasses}>
@@ -1993,6 +2001,8 @@ const WeatherApp = () => {
             </span>
           </div>
         )}
+        {/* Step 4: Render the Chatbot in the UI */}
+        <WeatherChatbot getWeatherReply={getWeatherReply} />
       </div>
     </div>
   );
