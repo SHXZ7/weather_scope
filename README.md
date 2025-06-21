@@ -1,52 +1,53 @@
-**🌦️ WeatherScope**
+# 🌦️ WeatherScope
 
-WeatherScope is a beautifully designed, feature-rich weather application built with Next.js and OpenWeatherMap API, allowing users to explore current conditions, hourly and daily forecasts, favorite cities, and even a fullscreen weather map of India.
+**WeatherScope** is a beautifully designed, feature-rich weather application built with **Next.js**, **OpenWeatherMap API**, and now powered by **Google Gemini AI (via OpenRouter)** to deliver an intelligent chatbot experience that helps users make weather-based decisions.
 
-**🚀 Features**
+---
 
-🔍 City-based Weather Search with autocomplete suggestions
+## 🚀 Features
 
-🌐 Live Weather Map of India powered by OpenWeatherMap
+🔍 **City-based Weather Search** with autocomplete suggestions  
+🌐 **Live Weather Map of India** powered by OpenWeatherMap  
+🕒 **Current, Hourly, and 3-Day Forecasts**  
+🎨 **Theme Selector** (Default, Ocean, Sunset, Forest, Rose)  
+🌘 **Dark/Light Mode Toggle** with system preference support  
+❤️ **Favorite Cities** bar with quick access & local storage persistence  
+📍 **Geolocation** support to auto-detect current location  
+📊 **Detailed Weather Metrics** (temp, wind, pressure, humidity, etc.)  
+✨ **Animated Backgrounds** based on weather and theme  
+💬 **Gemini AI Chatbot** to answer weather-related questions naturally  
+🔐 **Environment-based API key security** for Gemini & OpenWeatherMap
 
-🕒 Current, Hourly, and 3-Day Forecasts
+---
 
-🎨 Theme Selector (Default, Ocean, Sunset, Forest, Rose)
+## 🧠 Gemini AI Chatbot Integration
 
-🌘 Dark/Light Mode toggle with system preference detection
+WeatherScope now features a floating AI assistant powered by **Gemini Pro 1.5** through **OpenRouter**, helping users with weather-related advice in natural language.
 
-❤️ Favorite Cities bar with quick access & management
+- ✨ Ask: “Do I need an umbrella in Mumbai?”
+- 🤖 AI replies with helpful context, not just raw data
+- 🔒 Runs securely using your own API key via `.env.local`
 
-📍 Geolocation support to detect current location
+---
 
-📊 Detailed weather metrics (temp, wind, pressure, humidity, visibility, etc.)
+## 📦 Tech Stack
 
-💾 LocalStorage Persistence for theme and favorites
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS + custom gradients, transitions
+- **Icons**: Lucide-react
+- **APIs**:  
+  - OpenWeatherMap (for live weather)  
+  - OpenRouter + Gemini Pro 1.5 (for chatbot)
+- **State Management**: React Hooks + Context API
 
-✨ Animated background effects based on weather & theme
+---
 
-**📦 Tech Stack**
+## 🗺️ India Weather Map
 
-Framework: Next.js
+Click the floating **📍 Map Pin icon** in the bottom-right to open a fullscreen interactive map of India showing temperature, wind, and pressure layers via OpenWeatherMap.
 
-*API: OpenWeatherMap*
-
-Icons: Lucide-react
-
-Styling: Tailwind CSS + custom gradients & transitions
-
-State Management: React Hooks & Context API
-
-**🗺️ India Weather Map Integration**
-
-Click the floating Map Pin icon in the bottom-right corner to open a fullscreen interactive weather map for India, powered by OpenWeatherMap layers. Supports fullscreen toggle and keyboard Esc key to close.
-
-       
-**📜 License**
-
-MIT License. Free to use and customize.
-
-**👨‍💻 Author**
-
+---
+***👨‍💻 Author***
 Mohammed Shaaz
 🎥 Video Editor | 📊 Aspiring Data Analyst & ML Enthusiast | 💻 Full-Stack Learner
-📫 LinkedIn | 🌐 Portfolio
+🔗 LinkedIn | 🌐 Portfolio
