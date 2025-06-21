@@ -48,6 +48,7 @@ Click the floating **📍 Map Pin icon** in the bottom-right to open a fullscree
 
 ---
 ***👨‍💻 Author***
+
 Mohammed Shaaz
-🎥 Video Editor | 📊 Aspiring Data Analyst & ML Enthusiast | 💻 Full-Stack Learner
+
 🔗 LinkedIn | 🌐 Portfolio
