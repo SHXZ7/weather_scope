@@ -47,7 +47,7 @@ WeatherScope now features a floating AI assistant powered by **Gemini Pro 1.5** 
 Click the floating **📍 Map Pin icon** in the bottom-right to open a fullscreen interactive map of India showing temperature, wind, and pressure layers via OpenWeatherMap.
 
 ---
-***👨‍💻 Author***
+# 👨‍💻 Author
 
 Mohammed Shaaz
 
